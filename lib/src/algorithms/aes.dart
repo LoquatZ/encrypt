@@ -20,6 +20,8 @@ class AES implements Algorithm {
           : BlockCipher('AES/${_modes[mode]}');
     }
   }
+  
+  get cipher => _cipher;
 
   @override
   Encrypted encrypt(Uint8List bytes, {IV? iv, Uint8List? associatedData}) {
